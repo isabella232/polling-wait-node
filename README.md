@@ -30,6 +30,9 @@ Configuration Screenshot
 
 The above screenshot demonstrates the use of the Polling Wait Node by first requesting the user identify themselves, gathering some data from their profile and then calling out to a third-party REST service to fulfill a step of the authentication. The service operates asynchronously, and must be polled for a response. Using a Retry Limit Decision node in combination with the Polling Wait Node we can give the service a period of time to respond while displaying a user-friendly message. If the service responds successfully we break the loop and succeed, but if the service indicates failure or we get no appropriate answer from the service after a number of iterations, we fail.
 
+![ScreenShot](./example2.png)
+Active Screenshot
+
 ## Installation
 
 Copy the .jar file from the ../target directory into the ../web-container/webapps/openam/WEB-INF/lib directory where AM is deployed.  Restart the web container to pick up the new node.  The node will then appear in the authentication trees components palette.
